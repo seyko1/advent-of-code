@@ -1,0 +1,14 @@
+{
+  "name": "December2nd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "part-1": "node 1/script.js",
+    "part-2": "node 2/script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
