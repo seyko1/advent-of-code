@@ -46,8 +46,7 @@ console.log(`sum of valid games : ${sum}`);
   return true if the input set is impossible according to his color limit.
 */
 function hasTooManyCubes(set) {
-  let i = 0;
-  while (i < set.length) {
+  for (let i = 0; i < set.length; i++) {
     if (set[i].value > limits[set[i].key]) {
       return true;
     }
