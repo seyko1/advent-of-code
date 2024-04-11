@@ -34,7 +34,10 @@ for (let i = 0; i < array.length; i++) {
   for (let j = 0; j < array[i].length; j++) {
     const set = array[i][j];
 
-    if (hasTooManyCubes(set)) impossible = true;
+    if (hasTooManyCubes(set)) {
+      impossible = true;
+      break;
+    }
   }
 
   if (!impossible) sum += gameId;
