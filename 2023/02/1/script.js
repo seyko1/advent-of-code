@@ -65,12 +65,10 @@ function hasTooManyCubes(set) {
 function parseArray(inputArray) {
   if (!inputArray) return;
 
-  const outputArray = [];
-
-  inputArray.forEach(line => {
+  const outputArray = inputArray.map(line => {
     const sets = line.split(';');
 
-    const setObjects = sets.map(set => {
+    return sets.map(set => {
 
       const colors = set.match(/\d+\s+\w+/g);
 
@@ -79,7 +77,6 @@ function parseArray(inputArray) {
         return { key: color, value: parseInt(count) };
       });
     });
-    outputArray.push(setObjects);
   });
   return outputArray;
 }
