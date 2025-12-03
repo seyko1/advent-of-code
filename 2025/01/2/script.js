@@ -27,8 +27,8 @@ lines.forEach(line => {
   }
   
   if (direction == 'L') {
-    if (dial > 0 && dial <= number) nbTurn++;              // compte le premier tour
-    nbTurn += Math.floor((Math.abs(dial - number)) / 100); // résultat >= 1 à partir de 2 tours
+    const offset = (dial > 0 && dial <= number) ? 1 : 0;           // compte le premier tour
+    nbTurn = Math.floor((Math.abs(dial - number)) / 100) + offset; // résultat >= 1 à partir de 2 tours donc on ajoute l'offset du premier tour
 
     password += nbTurn;
 
