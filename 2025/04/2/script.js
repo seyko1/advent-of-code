@@ -44,10 +44,9 @@ function hasTooManyNeighbors(x, y) {
   let neighbors = 0;
 
   for (let i = x-1; i <= x+1; i++) {
+    if (i < 0 || i == w) continue;
     for (let j = y-1; j <= y+1; j++) {
-      if (i == x && j == y) continue;
-      if (i < 0 || j < 0) continue;
-      if (i == w || j == h) continue;
+      if (j < 0 || (i == x && j == y) || j == h) continue;
       if (grid[i][j] == '@') neighbors++ 
     }
   }
